@@ -1,4 +1,4 @@
-{% set version = '1.4-1' %}
+{% set version = "1.4-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/qpcR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/qpcR/qpcR_{{ version }}.tar.gz
-  sha256: 5b6fd10577d8f33a31d6a7781435866de78373481c03f642f7a9f0b1e5c101e4
+  sha256: 9f6d37187950045db91defbb4e82764e0ee677fecf3c6ec73257aa9e88900413
 
 build:
-  skip: True  # [osx]
-  number: 4
+  skip: true  # [osx]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -57,9 +57,8 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=qpcR
-  license: GPL-2.0-only
-  summary: Model fitting, optimal model selection and calculation of various features that are
-    essential in the analysis of quantitative real-time polymerase chain reaction (qPCR).
+  license: GPL-2.0-or-later
+  summary: Model fitting, optimal model selection and calculation of various features that are essential in the analysis of quantitative real-time polymerase chain reaction (qPCR).
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
