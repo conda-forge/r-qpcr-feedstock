@@ -9,7 +9,7 @@ About r-qpcr
 
 Home: https://CRAN.R-project.org/package=qpcR
 
-Package license: GPL-2.0-only
+Package license: GPL-2.0-or-later
 
 Summary: Model fitting, optimal model selection and calculation of various features that are essential in the analysis of quantitative real-time polymerase chain reaction (qPCR).
 
@@ -18,7 +18,7 @@ About r-qpcr
 
 Home: https://CRAN.R-project.org/package=qpcR
 
-Package license: GPL-2.0-only
+Package license: GPL-2.0-or-later
 
 Summary: Model fitting, optimal model selection and calculation of various features that are essential in the analysis of quantitative real-time polymerase chain reaction (qPCR).
 
