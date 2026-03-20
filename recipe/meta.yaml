@@ -3,7 +3,7 @@
 
 package:
   name: r-qpcr
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -12,7 +12,7 @@ source:
   sha256: 9f6d37187950045db91defbb4e82764e0ee677fecf3c6ec73257aa9e88900413
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,11 +28,6 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
     - xorg-libxfixes  # [linux]
   host:
     - r-base
@@ -41,6 +36,7 @@ requirements:
     - r-minpack.lm
     - r-rgl
     - r-robustbase
+    - libgl-devel                    # [linux]
   run:
     - r-base
     - r-mass
